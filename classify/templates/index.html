@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGO CLASSIFIER</title>
+	<meta charset="utf-8"/>
+	{% load staticfiles %}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'indexdesign.css' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid text-center bg1">
+			<h1 style="font-family: fantasy;">LOGO CLASSIFIER</h1><br>
+			<h4 style="font-family: cursive;">Just One Upload Away!!!</h4><br>
+	</div>
+
+
+		<div class="container-fluid text-center bg4">
+			<p style="letter-spacing: 1px;">Upload a logo of a food outlet to check for the offers available in it.</p>
+			<h4><span class="label label-danger">Burger King</span>
+				<span class="label label-primary">Dominos</span>
+				<span class="label label-danger">KFC</span>
+				<span class="label label-primary">Pizza Hut</span>
+				<span class="label label-danger">Starbucks</span>
+			</h4>
+		</div>
+
+<div class="container-fluid text-center bg3">
+<form method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
+{% for field in form %}
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <span class="text-danger small">{{ field.errors }}</span>
+        </div>
+        <div class="col-sm-12 text-center"><center>{{ field }}</center></div>
+    </div>
+{% endfor %}
+<br><br><br>
+<input type="submit" class="btn btn-primary" style="font-size: 16px; font-weight: bold; font-family: sans-serif;" value="CHECK FOR COUPONS"/>
+</form>	
+</div>
+
+<footer class="container-fluid bg1">
+<div style=" margin: 10px; text-align:center;">
+<ul style="list-style-type: none; letter-spacing: 2px;">
+<li style="display:inline;"><a href="http://uiet.puchd.ac.in/maivriklabs/index.html"><img src="{% static 'images/mavlogo.png' %}" height="50px"/></a></li>&nbsp;&nbsp;&nbsp;
+<li style="display:inline;" ><a href="http://uiet.puchd.ac.in/"><img src="{% static 'images/pu.jpg' %}" height="50px"/></a></li>
+</ul></div>
+<center>
+<br>
+<p>
+<a class="btn btn-danger" href="static/LogoClassifierReport.pdf">Report</a>
+<a class="btn btn-primary" href="static/LogoClassifierPresentation.pptx">Presentation</a>
+<a class="btn btn-success" href="static/imageClassifier.html">Training Code</a>
+</p>
+<p style="letter-spacing: 2px; padding-top: 10px;">Summer Internship Project (2017) started under Maverick Labs in collaboration with UIET, Chandigarh.<br> Interns: <a href="https://www.linkedin.com/in/aurobindo-debnath-403876128/">Aurobindo Debnath</a> and <a href="">Arun Yadav</a></p></center>
+</footer>
+
+</body>
+</html>
