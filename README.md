@@ -1,6 +1,8 @@
 # Logo Classifier
 Summer 2017 project: Logo Classifier
 
+**NOTE** - THE PROJECT IN NO LONGER MAINTAINED. IT WAS NOT UPDATED SINCE 2017. IT MAY CONTAIN SECURITY VULNERABILITIES!
+
 # What it does?
 Classifies five kind of logos: BurgerKing, KFC, PizzaHut, Dominos and Starbucks.
 Then redirects the user to the specified urls where their coupons are available.
